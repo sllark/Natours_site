@@ -1,0 +1,81 @@
+.section-about{
+  text-align: center;
+  &-content{
+      &-text{
+        padding: 0 1rem;
+        h1{
+          text-align: left;
+          font-size: 1.65rem;
+          font-weight: 600;
+          color: $color-grey-dark2;
+          padding: 2rem 0;
+          letter-spacing: 1.7px;
+          text-transform: uppercase;
+        }
+        p{
+          text-align: left;
+          line-height: 1.2;
+          letter-spacing: 1px;
+          font-size: 1.6rem;
+          color: $color-grey;
+        }
+      }
+   }
+}
+
+.section-features{
+  text-align: center;
+  i{
+    font-size: 6rem;
+    display: inline-block;
+    background-image: linear-gradient(to right,$color-primary-light,$color-primary-dark);
+    -webkit-background-clip:text;
+    color: transparent;
+  }
+  h2{
+    font-size: 1.66rem;
+    color: $color-grey-dark2;
+    font-weight: 600;
+    padding: 2rem 0;
+  }
+  p{
+    font-size: 1.5rem;
+    line-height: 1.7;
+    letter-spacing: 0.3px;
+    color: $color-grey;
+  }
+  .feature{
+    padding: 3.5rem 1.5rem 1.5rem;
+
+  }
+}
+
+
+.tours-box__card--front-details{
+
+}
+
+.tours-box__card--back{
+
+  &-price{
+    font-weight: lighter;
+    font-family: Lato,sans-serif;
+    color: $color-white;
+    font-size: 2rem;
+    .price-Value{
+      padding: 3rem 2rem;
+      font-size: 6rem;
+
+    }
+  }
+}
+
+
+.story{
+
+
+}
+
+
+
+
