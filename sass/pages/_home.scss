@@ -1,0 +1,565 @@
+.section-about{
+  padding: 26rem 0;
+  background-color: $color-grey-light;
+  margin-top: -20vh;
+
+
+  @media screen and  (max-width: 53.125em) { //850px
+    padding: 30rem 0 16rem;
+
+  }
+
+  &-content{
+
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+
+
+    @media screen and  (max-width: 53.125em) { //850px
+      flex-flow: column;
+    }
+
+    &-text{
+      width: 50%;
+      padding:0 2rem 0 6rem;
+      .btn-left{
+        text-align: left;
+        @media screen and  (max-width: 53.125em) { //850px
+
+            text-align: center;
+        }
+
+      }
+      .btn--text{
+        margin: 7rem 0 0;
+      }
+
+
+      @media screen and  (max-width: 53.125em) { //850px
+        width: 90%;
+        text-align: center;
+      }
+
+    }
+    &-pics{
+      position: relative;
+      width: 50%;
+      height: 100%;
+      //height: auto;
+
+      @media screen and  (max-width: 53.125em) { //850px
+    display: none;
+      }
+
+
+
+      &:hover .picture:not(:hover){
+        transform: scale(0.9);
+      }
+    }
+  }
+
+  img{
+    width: 40%;
+    height: auto;
+    box-shadow: -0.3rem 0.6rem 2rem rgba($color-black,0.35);
+    position: absolute;
+    transition: all 0.3s ease-in;
+  }
+  .img1{
+    top: -15rem;
+    left: 15%;
+  }
+  .img2{
+    top: -10rem;
+    left: 45%;
+  }
+  .img3{
+    top: -1rem;
+    left: 25%;
+  }
+  .img1:hover,.img2:hover,.img3:hover{
+    z-index: 10;
+    transform: scale(1.15) translateY(-0.5rem);
+    outline: 1rem solid $color-primary-light;
+    outline-offset: 1.5rem;
+  }
+
+}
+
+.section-features{
+
+  background-image: linear-gradient(to right bottom, rgba(126,213,111,0.8), rgba(40,180,133,0.8)),url('../img/nat-3-large.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  padding: 0 5rem;
+
+  min-height: 68rem;
+  height: 100%;
+  margin-top: -10rem;
+  transform: skewY(-7deg);
+
+  //Make shape Using polygon
+  //margin-top: -20rem;
+  //height: 90rem;
+  //clip-path: polygon(0 15%,100% 0,100% 85%,0 100%);
+
+  z-index: 10;
+
+  @media screen and  (max-width: 53.125em) { //850px
+    padding: 5rem 5rem;
+  }
+
+
+
+  @media screen and  (max-width: 25em) { //400px
+    padding: 5rem 2rem;
+  }
+
+
+  .feature-box{
+    transform: skewY(7deg);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and  (max-width: 53.125em) { //850px
+      flex-flow: column;
+    }
+  }
+  .feature{
+    width: 95%;
+    margin: 2rem;
+    min-height: 30rem;
+    height: auto;
+    background-color: rgba($color-white,0.8);
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+
+    @media screen and  (max-width: 25em) { //400px
+
+      width: 100%;
+      margin: 2rem 1rem;
+
+
+
+    }
+
+    &:hover{
+      transform: scale(1.02) translateY(-1.5rem);
+      box-shadow: 0.3rem 0.5rem 1rem rgba($color-black,0.35);
+    }
+    &:active{
+         transform: scale(1.004) translateY(-1rem);
+         box-shadow: 0.1rem 0.3rem 0.6rem rgba($color-black,0.3);
+       }
+
+  }
+
+}
+
+
+
+.section-tour{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+
+
+
+
+  width: 100%;
+  height: 100%;
+  padding: 20rem 3rem 17rem;
+  z-index: -1;
+  margin-top:-8rem;
+
+  background-color: $color-grey-light;
+
+
+  @media screen and  (max-width: 25em) { //400px
+    padding: 20rem 2rem 17rem;
+
+  }
+
+
+  h1{
+    margin-bottom: 4rem;
+    text-align: center;
+  }
+
+  .tours-box{
+    min-height: 42rem;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    @media screen and  (max-width: 53.125em) { //850px
+      flex-flow: column;
+    }
+
+
+
+
+    &__card{
+      position: relative;
+      margin: 1rem 2.5rem;
+      min-height: 45rem;
+      height: auto;
+      min-width: 22rem;
+      width: 70%;
+      //width: 33%;
+      backface-visibility: hidden;
+      border-radius: 3px;
+      overflow: hidden;
+
+      @media screen and  (max-width: 53.125em) { //850px
+        margin: 4rem 2.5rem;
+
+      }
+
+      @media screen and  (max-width: 21.875em) { //850px
+        width: 100%;
+
+      }
+
+      &--front{
+        position: absolute;
+        top: 0;
+        left: 0;
+
+
+        width: 100%;
+        height: 100%;
+
+        padding: 0 0 3rem;
+
+        background-color: $color-white;
+        backface-visibility: hidden;
+        transition: all 0.7s ease-in-out;
+        perspective: 1500px;
+
+        &-pic{
+          width: 100%;
+          height: 50%;
+          background-repeat: no-repeat;
+          background-size: cover;
+          -webkit-clip-path: polygon(0 0,100% 0,100% 85%,0 100%);
+          clip-path: polygon(0 0,100% 0,100% 85%,0 100%);
+          background-blend-mode: screen;
+
+
+          &-1{
+            background-image: linear-gradient(to right,$color-sec-light,$color-sec-dark), url(../img/nat-5.jpg);
+          }
+
+          &-2{
+            background-image: linear-gradient(to right,$color-primary-light,$color-primary-dark),url(../img/nat-6.jpg);
+          }
+
+          &-3{
+            background-image:linear-gradient(to right,$color-tertiary-light,$color-tertiary-dark), url(../img/nat-7.jpg);
+          }
+
+
+        }
+
+        &-heading{
+          position: absolute;
+          text-align: right;
+          top: 8rem;
+          left: 3rem;
+          padding: 3rem 1rem;
+          text-transform: uppercase;
+          font-size: 3rem;
+          font-weight: 500;
+          color: $color-white;
+
+
+          @media screen and  (max-width: 65.625em) { //1050px
+            font-size: 2.3rem;
+            padding: 2rem 0.6rem;
+          }
+
+          @media screen and  (max-width: 56.25em) { //900px
+            margin-right: 1rem;
+            left: 1rem;
+
+          }
+
+
+          @media screen and  (max-width: 53.125em) { //850px
+            top: 8rem;
+            left:25%;
+
+            padding: 3rem 1rem;
+            font-size: 3rem;
+            text-align: center;
+          }
+
+          @media screen and  (max-width: 31.25em) { //500px
+            top: 8rem;
+            left: 0.7rem;
+            font-size: 2.3rem;
+          }
+
+
+          &-span-1{
+            background-image: linear-gradient(to right,rgba($color-sec-light,0.8),rgba($color-sec-dark,0.8));
+          }
+          &-span-2{
+            background-image: linear-gradient(to right,rgba($color-primary-light,0.8),rgba($color-primary-dark,0.8));
+          }
+          &-span-3{
+            background-image: linear-gradient(to right,rgba($color-tertiary-light,0.8),rgba($color-tertiary-dark,0.8));
+          }
+
+
+          & span{
+            -webkit-box-decoration-break: clone;
+            box-decoration-break: clone;
+            padding: 0.5rem 1.4rem;
+            height: 20rem;
+            width: 100%;
+            line-height: 1.5;
+
+
+
+
+         }
+
+        }
+
+
+
+        &-details{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          li{
+            padding: 1.2rem 0;
+            font-size: 1.5rem;
+            color: $color-grey-light3;
+            font-weight: 600;
+
+
+            @media screen and  (max-width: 53.125em) { //850px
+              font-size: 1.8rem;
+              padding: 1.3rem 0;
+
+            }
+
+            @media screen and  (max-width: 31.25em) { //500px
+              padding: 1.2rem 0;
+              font-size: 1.5rem;
+            }
+
+
+
+            &:not(:last-child){
+              &:after{
+                content: '';
+                display: block;
+                width: 100%;
+                height: 1px;
+                background-color: $color-grey-light2;
+                position: relative;
+                top: 1rem;
+              }
+
+            }
+
+          }
+
+        }
+
+
+
+      }
+
+      &--back{
+        display: flex;
+        flex-flow: column;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+
+        width: 100%;
+        height: 100%;
+        padding: 3rem 3rem;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        backface-visibility:hidden;
+
+        transform: rotateY(180deg);
+        transition: all 0.7s ease-in-out;
+
+
+        .btn--white{
+          width: 18rem;
+          position: relative;
+          top: -5rem;
+          &:hover{
+            transition: none;
+          }
+          &:after{
+               transition: none;
+          }
+        }
+
+
+
+        &-1{
+          background-image: linear-gradient(to right bottom,$color-sec-light,$color-sec-dark);
+        }
+
+
+        &-2{
+          background-image: linear-gradient(to right bottom,$color-primary-light,$color-primary-dark);
+        }
+
+
+        &-3{
+          background-image: linear-gradient(to right bottom,$color-tertiary-light,$color-tertiary-dark);
+        }
+      }
+
+    }
+
+    &__card:hover {
+      .tours-box__card--front{
+        transform: rotateY(-180deg);
+      }
+      .tours-box__card--back{
+        transform: rotateX(360deg);
+      }
+    }
+  }
+  .btn--green{
+    top: 4rem;
+  }
+
+
+}
+
+
+
+
+
+
+.section-story{
+  background-image:linear-gradient(to bottom,rgba($color-grey-light,0.8),rgba($color-white,0.9)), url("../img/nat-1-large.jpg");
+  background-size: cover;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items:center;
+  padding: 10rem 6rem;
+
+
+  @media screen and  (max-width: 25em) { //400px
+    padding: 10rem 2rem;
+  }
+
+
+
+  h1{
+    text-align: center;
+  }
+
+  .btn--text{
+    margin-top: 6rem;
+  }
+}
+
+.section-booking{
+  width: 100%;
+  height: 80rem;
+  background-image: linear-gradient(to right bottom,$color-primary,$color-primary-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__book{
+    width: 85%;
+    height: 70%;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    background-image: linear-gradient(105deg,rgba($color-white,0.9) 0%,rgba($color-white,0.9) 50%,transparent 50%),url("../img/nat-10.jpg");
+
+    background-size: cover;
+
+
+    @media screen and  (max-width: 59.375em) { //950px
+      background-image: linear-gradient(105deg,rgba($color-white,0.9) 0%,rgba($color-white,0.9) 60%,transparent 60%),url("../img/nat-10.jpg");
+    }
+
+
+    @media screen and  (max-width: 43.75em) { //700px
+      background-image: linear-gradient(105deg,rgba($color-white,0.9) 0%,rgba($color-white,0.9) 70%,transparent 70%),url("../img/nat-10.jpg");
+
+    }
+
+
+    @media screen and  (max-width: 37.5em) { //600px
+      background-image: linear-gradient(105deg,rgba($color-white,0.9) 0%,rgba($color-white,0.9)),url("../img/nat-10.jpg");
+
+    }
+
+
+
+
+    &__form{
+      width: 50%;
+      height: auto;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+      padding: 5rem 0;
+
+      @media screen and  (max-width: 59.375em) { //950px
+        width: 60%;
+      }
+      @media screen and  (max-width: 43.75em) { //700px
+
+        width: 70%;
+      }
+
+      @media screen and  (max-width: 37.5em) { //600px
+        width: 100%;
+      }
+
+
+
+
+      h1 {
+        text-align: center;
+
+      }
+
+    }
+  }
+
+}
